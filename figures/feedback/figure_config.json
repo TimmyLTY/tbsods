@@ -1,0 +1,14 @@
+{
+  "figure_operations": [
+    "diagnose",
+    "correct",
+    "paraphrase",
+    "summarize",
+    "brainstorm",
+    "solve",
+    "comment",
+    "continue",
+    "compose",
+    "explain"
+  ]
+}

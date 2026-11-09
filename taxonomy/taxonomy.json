@@ -1,0 +1,144 @@
+{
+  "taxonomy_version": "dialog_act_multiaxis_v8_20260729",
+  "unit": "current_user_turn",
+  "context_mode": "with_previous_assistant",
+  "annotation_status": "assumed_unvalidated",
+  "output_contract": {
+    "field_order": [
+      "task_dialogue_act",
+      "boundedness",
+      "support",
+      "operations",
+      "disclosures",
+      "stances"
+    ],
+    "fields": {
+      "task_dialogue_act": {
+        "kind": "scalar",
+        "values": ["answer", "create", "revise", "other", "no_task"]
+      },
+      "boundedness": {
+        "kind": "nullable_scalar",
+        "values": ["closed", "guided", "open"]
+      },
+      "support": {
+        "kind": "array",
+        "order_policy": "evidence_first",
+        "values": ["user_material", "assistant_material"]
+      },
+      "operations": {
+        "kind": "array",
+        "order_policy": "evidence_first",
+        "values": [
+          "list",
+          "describe",
+          "explain",
+          "solve",
+          "demonstrate",
+          "scaffold",
+          "justify",
+          "compose",
+          "brainstorm",
+          "summarize",
+          "translate",
+          "paraphrase",
+          "simplify",
+          "shorten",
+          "expand",
+          "restructure",
+          "reformat",
+          "extract",
+          "classify",
+          "compare",
+          "evaluate",
+          "diagnose",
+          "correct",
+          "recommend",
+          "predict",
+          "comment",
+          "continue",
+          "recall",
+          "other"
+        ]
+      },
+      "disclosures": {
+        "kind": "array",
+        "order_policy": "evidence_first",
+        "values": [
+          "identity",
+          "experience",
+          "emotion",
+          "preference",
+          "intended_use",
+          "stake",
+          "benefit",
+          "risk",
+          "other"
+        ]
+      },
+      "stances": {
+        "kind": "array",
+        "order_policy": "evidence_first",
+        "values": [
+          "acknowledgement",
+          "agreement",
+          "appreciation",
+          "apology",
+          "contestation",
+          "threat",
+          "withdrawal",
+          "opening",
+          "closing",
+          "other_stance"
+        ]
+      }
+    }
+  },
+  "axes": {
+    "task_dialogue_act": {
+      "field": "task_dialogue_act",
+      "cardinality": "exactly_one",
+      "labels": ["answer", "create", "revise", "other", "no_task"]
+    },
+    "boundedness": {
+      "field": "boundedness",
+      "cardinality": "exactly_one_when_task_present",
+      "labels": ["closed", "guided", "open"]
+    },
+    "support": {
+      "field": "support",
+      "cardinality": "zero_or_more",
+      "labels": ["user_material", "assistant_material"]
+    },
+    "operations": {
+      "field": "operations",
+      "cardinality": "zero_or_more",
+      "labels": [
+        "list", "describe", "explain", "solve", "demonstrate", "scaffold",
+        "justify", "compose", "brainstorm", "summarize", "translate",
+        "paraphrase", "simplify", "shorten", "expand", "restructure",
+        "reformat", "extract", "classify", "compare", "evaluate", "diagnose",
+        "correct", "recommend", "predict", "comment", "continue", "recall",
+        "other"
+      ]
+    },
+    "disclosures": {
+      "field": "disclosures",
+      "cardinality": "zero_or_more",
+      "labels": [
+        "identity", "experience", "emotion", "preference", "intended_use",
+        "stake", "benefit", "risk", "other"
+      ]
+    },
+    "stances": {
+      "field": "stances",
+      "cardinality": "zero_or_more",
+      "labels": [
+        "acknowledgement", "agreement", "appreciation", "apology",
+        "contestation", "threat", "withdrawal", "opening", "closing",
+        "other_stance"
+      ]
+    }
+  },
+  "cross_field_constraints": []
+}

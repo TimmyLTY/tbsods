@@ -1,0 +1,162 @@
+country,code,region,english_group,english_status_cldr44,turns,conversations
+<missing>,,Excluded,Excluded,none,283,126
+Afghanistan,AF,Excluded,Other language environment,none,126,48
+Albania,AL,Europe-plus,Other language environment,none,58,20
+Algeria,DZ,Excluded,Other language environment,none,439,130
+Andorra,AD,Europe-plus,Other language environment,none,2,1
+Argentina,AR,Excluded,Other language environment,none,621,143
+Armenia,AM,Excluded,Other language environment,none,32,10
+Aruba,AW,Excluded,Other language environment,none,44,4
+Australia,AU,Europe-plus,English official/de facto,de_facto_official,5606,1616
+Austria,AT,Europe-plus,Other language environment,none,352,125
+Azerbaijan,AZ,Excluded,Other language environment,none,87,37
+Bahrain,BH,Excluded,Other language environment,none,60,23
+Bangladesh,BD,Excluded,Other language environment,none,465,181
+Belarus,BY,Europe-plus,Other language environment,none,1182,335
+Belgium,BE,Europe-plus,Other language environment,none,426,104
+Belize,BZ,Excluded,English official/de facto,official,25,3
+Bhutan,BT,Excluded,Other language environment,none,15,2
+Bosnia and Herzegovina,BA,Europe-plus,Other language environment,none,9,4
+Botswana,BW,Excluded,English official/de facto,official,71,13
+Brazil,BR,Excluded,Other language environment,none,612,208
+Brunei,BN,East and Southeast Asia,Other language environment,none,6,6
+Bulgaria,BG,Europe-plus,Other language environment,none,254,72
+Burkina Faso,BF,Excluded,Other language environment,none,1,1
+Cambodia,KH,East and Southeast Asia,Other language environment,none,378,97
+Cameroon,CM,Excluded,English official/de facto,official,175,60
+Canada,CA,Europe-plus,English official/de facto,official,9305,2501
+Chile,CL,Excluded,Other language environment,none,19,7
+China,CN,East and Southeast Asia,Other language environment,none,7528,2468
+Colombia,CO,Excluded,Other language environment,none,133,32
+Congo Republic,CG,Excluded,Other language environment,none,2,1
+Cook Islands,CK,Excluded,English official/de facto,official,1,1
+Costa Rica,CR,Excluded,Other language environment,none,20,5
+Croatia,HR,Europe-plus,Other language environment,none,130,29
+Cuba,CU,Excluded,Other language environment,none,14,6
+Cyprus,CY,Excluded,Other language environment,none,24,7
+Czechia,CZ,Europe-plus,Other language environment,none,123,36
+DR Congo,CD,Excluded,Other language environment,none,62,22
+Denmark,DK,Europe-plus,Other language environment,none,408,124
+Dominican Republic,DO,Excluded,Other language environment,none,12,3
+Ecuador,EC,Excluded,Other language environment,none,322,53
+Egypt,EG,Excluded,Other language environment,none,6326,1891
+El Salvador,SV,Excluded,Other language environment,none,62,11
+Eritrea,ER,Excluded,English official/de facto,official,7,2
+Estonia,EE,Europe-plus,Other language environment,none,475,195
+Eswatini,SZ,Excluded,English official/de facto,official,10,5
+Ethiopia,ET,Excluded,Other language environment,none,1676,542
+Fiji,FJ,Excluded,English official/de facto,official,29,13
+Finland,FI,Europe-plus,Other language environment,none,1361,267
+France,FR,Europe-plus,Other language environment,none,2929,916
+French Polynesia,PF,Excluded,Other language environment,none,16,3
+Gabon,GA,Excluded,Other language environment,none,14,8
+Georgia,GE,Excluded,Other language environment,none,99,38
+Germany,DE,Europe-plus,Other language environment,none,3230,982
+Ghana,GH,Excluded,English official/de facto,official,446,102
+Greece,GR,Europe-plus,Other language environment,none,562,216
+Guam,GU,Excluded,English official/de facto,de_facto_official,5,3
+Guatemala,GT,Excluded,Other language environment,none,108,10
+Guyana,GY,Excluded,English official/de facto,official,11,5
+Haiti,HT,Excluded,Other language environment,none,4,3
+Hong Kong,HK,East and Southeast Asia,English official/de facto,official,10254,3468
+Hungary,HU,Europe-plus,Other language environment,none,277,85
+India,IN,Excluded,English official/de facto,official,11498,3875
+Indonesia,ID,East and Southeast Asia,Other language environment,none,685,247
+Iran,IR,Excluded,Other language environment,none,5063,1484
+Iraq,IQ,Excluded,Other language environment,none,491,188
+Ireland,IE,Europe-plus,English official/de facto,official,688,159
+Isle of Man,IM,Europe-plus,English official/de facto,official,13,2
+Israel,IL,Excluded,Other language environment,none,599,204
+Italy,IT,Europe-plus,Other language environment,none,1345,416
+Ivory Coast,CI,Excluded,Other language environment,none,4,2
+Jamaica,JM,Excluded,English official/de facto,official,595,174
+Japan,JP,East and Southeast Asia,Other language environment,none,2600,865
+Jordan,JO,Excluded,Other language environment,none,319,100
+Kazakhstan,KZ,Excluded,Other language environment,none,215,88
+Kenya,KE,Excluded,English official/de facto,official,1299,393
+Kosovo,XK,Europe-plus,Other language environment,none,364,64
+Kuwait,KW,Excluded,Other language environment,none,182,39
+Kyrgyzstan,KG,Excluded,Other language environment,none,87,21
+Laos,LA,East and Southeast Asia,Other language environment,none,6,4
+Latvia,LV,Europe-plus,Other language environment,none,194,59
+Lebanon,LB,Excluded,Other language environment,none,257,64
+Liberia,LR,Excluded,English official/de facto,official,69,21
+Libya,LY,Excluded,Other language environment,none,49,14
+Lithuania,LT,Europe-plus,Other language environment,none,202,48
+Luxembourg,LU,Europe-plus,Other language environment,none,87,19
+Macao,MO,East and Southeast Asia,Other language environment,none,704,214
+Malawi,MW,Excluded,English official/de facto,official,8,3
+Malaysia,MY,East and Southeast Asia,Other language environment,none,1219,335
+Maldives,MV,Excluded,Other language environment,none,2,2
+Malta,MT,Europe-plus,English official/de facto,official,177,64
+Mauritius,MU,Excluded,English official/de facto,official,1653,172
+Mexico,MX,Excluded,Other language environment,none,601,188
+Moldova,MD,Europe-plus,Other language environment,none,24,14
+Monaco,MC,Europe-plus,Other language environment,none,3,1
+Mongolia,MN,East and Southeast Asia,Other language environment,none,39,16
+Montenegro,ME,Europe-plus,Other language environment,none,1,1
+Morocco,MA,Excluded,Other language environment,none,2729,694
+Mozambique,MZ,Excluded,Other language environment,none,1,1
+Myanmar,MM,East and Southeast Asia,Other language environment,none,138,44
+Namibia,NA,Excluded,English official/de facto,official,7,5
+Nepal,NP,Excluded,Other language environment,none,310,134
+New Zealand,NZ,Europe-plus,English official/de facto,de_facto_official,772,359
+Nicaragua,NI,Excluded,Other language environment,none,3,1
+Niger,NE,Excluded,Other language environment,none,3,1
+Nigeria,NG,Excluded,English official/de facto,official,1655,710
+Northern Mariana Islands,MP,Excluded,English official/de facto,de_facto_official,2,1
+Norway,NO,Europe-plus,Other language environment,none,166,63
+Oman,OM,Excluded,Other language environment,none,185,51
+Pakistan,PK,Excluded,English official/de facto,official,1969,728
+Palestine,PS,Excluded,Other language environment,none,702,101
+Panama,PA,Excluded,Other language environment,none,8,2
+Papua New Guinea,PG,Excluded,English official/de facto,official,297,64
+Paraguay,PY,Excluded,Other language environment,none,10,4
+Peru,PE,Excluded,Other language environment,none,1007,361
+Philippines,PH,East and Southeast Asia,English official/de facto,official,4696,1340
+Poland,PL,Europe-plus,Other language environment,none,740,270
+Portugal,PT,Europe-plus,Other language environment,none,416,103
+Puerto Rico,PR,Excluded,English official/de facto,de_facto_official,57,36
+Qatar,QA,Excluded,Other language environment,none,511,129
+Romania,RO,Europe-plus,Other language environment,none,318,100
+Russia,RU,Europe-plus,Other language environment,none,11532,4001
+Rwanda,RW,Excluded,English official/de facto,official,638,158
+Saudi Arabia,SA,Excluded,Other language environment,none,4131,883
+Serbia,RS,Europe-plus,Other language environment,none,119,37
+Seychelles,SC,Excluded,English official/de facto,official,11,4
+Sierra Leone,SL,Excluded,English official/de facto,official,6,1
+Singapore,SG,East and Southeast Asia,English official/de facto,official,2876,1086
+Slovakia,SK,Europe-plus,Other language environment,none,117,33
+Slovenia,SI,Europe-plus,Other language environment,none,113,21
+Somalia,SO,Excluded,Other language environment,none,5,3
+South Africa,ZA,Excluded,English official/de facto,official,1131,306
+South Korea,KR,East and Southeast Asia,Other language environment,none,1236,495
+South Sudan,SS,Excluded,English official/de facto,official,23,18
+Spain,ES,Europe-plus,Other language environment,none,1156,306
+Sri Lanka,LK,Excluded,Other language environment,none,565,222
+St Vincent and Grenadines,VC,Excluded,English official/de facto,official,2,2
+Sweden,SE,Europe-plus,Other language environment,none,601,198
+Switzerland,CH,Europe-plus,Other language environment,none,386,116
+Syria,SY,Excluded,Other language environment,none,259,85
+Taiwan,TW,East and Southeast Asia,Other language environment,none,793,320
+Tajikistan,TJ,Excluded,Other language environment,none,4,4
+Tanzania,TZ,Excluded,English official/de facto,official,86,34
+Thailand,TH,East and Southeast Asia,Other language environment,none,542,157
+The Netherlands,NL,Europe-plus,Other language environment,none,2281,627
+Timor-Leste,TL,East and Southeast Asia,Other language environment,none,1,1
+Togo,TG,Excluded,Other language environment,none,6,1
+Trinidad and Tobago,TT,Excluded,English official/de facto,official,146,29
+Tunisia,TN,Excluded,Other language environment,none,148,53
+Türkiye,TR,Excluded,Other language environment,none,2555,655
+Uganda,UG,Excluded,English official/de facto,official,56,29
+Ukraine,UA,Europe-plus,Other language environment,none,905,327
+United Arab Emirates,AE,Excluded,Other language environment,none,978,278
+United Kingdom,GB,Europe-plus,English official/de facto,official,9481,2946
+United States,US,Europe-plus,English official/de facto,de_facto_official,54327,16467
+Uruguay,UY,Excluded,Other language environment,none,82,31
+Uzbekistan,UZ,Excluded,Other language environment,none,1052,311
+Venezuela,VE,Excluded,Other language environment,none,465,145
+Vietnam,VN,East and Southeast Asia,Other language environment,none,2033,589
+Yemen,YE,Excluded,Other language environment,none,580,194
+Zambia,ZM,Excluded,English official/de facto,official,44,16
+Zimbabwe,ZW,Excluded,English official/de facto,official,198,79

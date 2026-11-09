@@ -1,0 +1,96 @@
+{
+  "task_dialogue_act": {
+    "definition": "The primary function of the current user turn, defined by the outcome the user requests.",
+    "cardinality": "exactly_one",
+    "labels": {
+      "answer": "The user request seeks a response whose primary discourse outcome is the provision of information.",
+      "create": "The user request seeks a response, or the creation of a artifact, that is not anchored to an identifiable source, text, content or material.",
+      "revise": "The user request seeks a response to be derived from the transformation of an identifiable source, text, content or material and that preserves a recognizable relation to that artifact.",
+      "other": "The user request expresses a substantive communicative goal that is not captured by answer, create, or revise.",
+      "no_task": "The user turn expresses no substantive communicative goal for the system to fulfill."
+    }
+  },
+  "boundedness": {
+    "definition": "The degree to which the request constrains the set of acceptable outputs.",
+    "cardinality": "exactly_one_when_task_present",
+    "labels": {
+      "closed": "The request has a determinate answer, a fixed transformation target, or explicit criteria that leave little substantive discretion over the output.",
+      "guided": "The user specifies the goal and one or more substantive requirements, source materials, components, or evaluation criteria, but multiple different outputs could still satisfy the request.",
+      "open": "The user specifies only a broad goal or topic and leaves most substantive choices about content, organization, approach, or form to the model."
+    }
+  },
+  "support": {
+    "definition": "Whether the requested task directly operates on currently supplied material.",
+    "cardinality": "zero_or_more",
+    "labels": {
+      "user_material": "The user request contains some content or attachment supplied in the current user turn, such as text, citation, quote, code, data, an exercise, a draft, or a candidate answer.",
+      "assistant_material": "The current user request directly refers to, evaluates, continues, or transforms content in the immediately previous assistant turn."
+    }
+  },
+  "operations": {
+    "definition": "The operation(s) requested by the user.",
+    "cardinality": "zero_or_more",
+    "labels": {
+      "list": "The user asks the assistant to enumerate items, examples, properties, reasons, steps, or options.",
+      "describe": "The user asks the assistant to state the properties, components, structure, state, or observable characteristics of something.",
+      "explain": "The user asks the assistant to present causes, mechanisms, meanings, relationships, implications, reasoning, or derivation.",
+      "solve": "The user asks the assistant to derive or provide the completed solution to a structured problem, exercise, calculation, or assignment item.",
+      "demonstrate": "The user asks the assistant to show how a method, rule, procedure, or concept is applied, typically through a worked example.",
+      "scaffold": "The user asks the assistant to provide hints, guiding questions, partial steps, or limited feedback without completing the task for the user.",
+      "justify": "The user asks the assistant to support a claim, result, judgment, or recommendation with reasoning, proof, evidence, sources, or citations.",
+      "compose": "The user asks the assistant to produce the substantive content of a new, finished artifact, such as an essay, message, story, plan, lesson, prompt, exercise, or code artifact.",
+      "brainstorm": "The user asks the assistant to generate multiple preliminary ideas, possibilities, approaches, or alternatives without producing one finalized artifact.",
+      "summarize": "The user asks the assistant to produce a shorter representation of identifiable source content while preserving its central information or claims.",
+      "translate": "The user asks the assistant to render identifiable source content in another language while preserving its meaning.",
+      "paraphrase": "The user asks the assistant to restate identifiable source content in different wording while preserving substantially the same meaning and level of detail.",
+      "simplify": "The user asks the assistant to make identifiable content linguistically or conceptually easier to understand while preserving its main meaning.",
+      "shorten": "The user asks the assistant to reduce the length or detail of identifiable content without necessarily preserving all of its central information.",
+      "expand": "The user asks the assistant to add detail, elaboration, examples, or development to identifiable content.",
+      "restructure": "The user asks the assistant to change the ordering, grouping, hierarchy, or discourse organization of identifiable content.",
+      "reformat": "The user asks the assistant to change the layout, notation, serialization, schema, or formal representation of identifiable content without intentionally changing its meaning.",
+      "extract": "The user asks the assistant to select and return specified facts, spans, fields, entities, relations, values, or other elements from supplied content.",
+      "classify": "The user asks the assistant to assign one or more objects to predefined categories, labels, classes, or types.",
+      "compare": "The user asks the assistant to identify similarities, differences, or relative characteristics between two or more objects, claims, methods, options, or outputs.",
+      "evaluate": "The user asks the assistant to judge correctness, quality, validity, adequacy, relevance, compliance, or performance against criteria.",
+      "diagnose": "The user asks the assistant to identify the location, source, cause, or nature of an error, misconception, failure, or unexpected result.",
+      "correct": "The user asks the assistant to correct an identified or asserted defect in text, code, reasoning, a solution, or another artifact.",
+      "recommend": "The user asks the assistant to select, rank, prioritize, or propose a preferred option or course of action.",
+      "predict": "The user asks the assistant to estimate or forecast a future, unknown, or uncertain outcome.",
+      "comment": "The user asks the assistant to provide open-ended observations or interpretive remarks when no more specific analytical operation is requested.",
+      "continue": "The user asks the assistant to extend an incomplete or ongoing response or artifact from the immediately previous assistant turn.",
+      "recall": "The user asks the assistant to reproduce or retrieve from the conversation a previously presented or produced content.",
+      "other": "The user asks the assistant to perform an explicit operation that cannot be represented by another operation label."
+    }
+  },
+  "disclosures": {
+    "definition": "Contextual information volunteered by the user about the circumstances, intended use, affected parties, or consequences of the requested task.",
+    "cardinality": "zero_or_more",
+    "labels": {
+      "identity": "The user states a personal, demographic, biographical, relational, educational, occupational, health-related, financial, geographic, or other attribute of themselves or another person.",
+      "experience": "The user reports an event, interaction, or situation that they or another individual personally experienced or are currently undergoing.",
+      "emotion": "The user explicitly states or directly describes an emotional state, feeling, mood, or affective reaction experienced by themselves or another person.",
+      "preference": "The user states a like, dislike, interest, aversion, value, priority, opinion, or preferred way of acting or receiving an output.",
+      "intended_use": "The user states how, where, when, or for what subsequent activity, decision, submission, task, or interaction the requested output will be used.",
+      "stake": "The user identifies a person, group, institution, relationship that is expected to be affected by the task, without explicitly stating a positive or negative consequence.",
+      "benefit": "The user states an expected or possible positive consequence of completing the task successfully or obtaining the requested output.",
+      "risk": "The user states an expected or possible negative consequence of failure, inaccuracy, delay, an unsuitable output, or unsuccessful task completion.",
+      "other": "The user explicitly reveals contextual or personal information that cannot be represented by another disclosure label."
+    }
+  },
+  "stances": {
+    "definition": "The user's explicitly expressed interpersonal orientation toward the assistant, the immediately previous assistant answer, or the interaction.",
+    "cardinality": "zero_or_more",
+    "labels": {
+      "acknowledgement": "The user signals receipt, understanding, or readiness to continue without explicitly endorsing or evaluating the previous answer.",
+      "agreement": "The user explicitly accepts, endorses, or agrees with the immediately previous assistant answer, proposal, or interpretation.",
+      "appreciation": "The user explicitly thanks, praises, or positively evaluates the assistant, its previous answer, or the interaction.",
+      "apology": "The user apologizes for the user's own conduct, error, delay, misunderstanding, or wording.",
+      "contestation": "The user rejects, contradicts, challenges, criticizes, complains about, or negatively evaluates the previous assistant answer or interaction.",
+      "threat": "The user states or clearly implies an intention to punish, retaliate, report, expose, cause harm, or impose a negative consequence in response to the assistant or interaction.",
+      "withdrawal": "The user retracts a prior request, declines to continue engaging, indicates an intention to leave the conversation, or explicitly asks to end the current task or line of interaction.",
+      "opening": "The user includes a live greeting or phatic opener addressed to the assistant.",
+      "closing": "The user includes a live farewell or explicitly ends the interaction.",
+      "other_stance": "The user expresses a clear interpersonal orientation toward the assistant or interaction that does not fit the other stance labels."
+    }
+  }
+}

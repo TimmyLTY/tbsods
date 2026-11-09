@@ -1,0 +1,31 @@
+{
+  "dataset": "allenai/WildChat-1M",
+  "revision": "7d6490e462285cf85d91eabea0f9a954fbddcd1f",
+  "configuration": "default",
+  "split": "train",
+  "shards": 14,
+  "source_conversations": 837989,
+  "clean_english_conversations": 473202,
+  "qwen_forwarded_conversations": 175234,
+  "valid_gpt_decisions": 173278,
+  "education_positive_conversations": 63682,
+  "released_conversations": 63559,
+  "released_turns": 207047,
+  "selection_models": [
+    "Qwen3-8B",
+    "gpt-4o-mini-2024-07-18"
+  ],
+  "annotation_model": "gpt-5.6-luna",
+  "annotation_reasoning_effort": "none",
+  "annotation_max_completion_tokens": 512,
+  "annotation_temperature": null,
+  "annotation_temperature_note": "No explicit temperature was submitted.",
+  "annotation_version": "dialog_act_multiaxis_v8_20260729",
+  "annotation_batch_date": "2026-07-30",
+  "canonical_export_date": "2026-08-03",
+  "release_field_names": {
+    "task_dialogue_act": "Task dialogue act",
+    "boundedness": "Boundedness"
+  },
+  "field_name_note": "Publication-aligned field names; annotation values and decision rules are unchanged. Prompt and schema copies use these same names."
+}

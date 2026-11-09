@@ -1,0 +1,103 @@
+{
+  "colors": {
+    "work": "#39799E",
+    "material": "#BF8438",
+    "expression": "#448577"
+  },
+  "axes": [
+    {
+      "axis": "task_dialogue_act",
+      "title": "Task dialogue act",
+      "group": "work",
+      "population": "all_turns",
+      "limit": 60,
+      "top": null
+    },
+    {
+      "axis": "boundedness",
+      "title": "Boundedness",
+      "group": "work",
+      "population": "valid_bounded_task_turns",
+      "limit": 60,
+      "top": null
+    },
+    {
+      "axis": "support",
+      "title": "Support",
+      "group": "material",
+      "population": "task_turns",
+      "limit": 60,
+      "top": null
+    },
+    {
+      "axis": "operations",
+      "title": "Operations (top 10)",
+      "group": "work",
+      "population": "task_turns",
+      "limit": 30,
+      "top": 10
+    },
+    {
+      "axis": "disclosures",
+      "title": "Disclosures",
+      "group": "expression",
+      "population": "task_turns",
+      "limit": 12,
+      "top": null
+    },
+    {
+      "axis": "stances",
+      "title": "Stances",
+      "group": "expression",
+      "population": "task_turns",
+      "limit": 6,
+      "top": null
+    }
+  ],
+  "contrasts": [
+    {
+      "key": "model",
+      "title": "GPT-4 − GPT-3.5",
+      "labels": [
+        [
+          "boundedness",
+          "guided"
+        ],
+        [
+          "support",
+          "assistant_material"
+        ],
+        [
+          "support",
+          "user_material"
+        ],
+        [
+          "disclosures",
+          "intended_use"
+        ]
+      ]
+    },
+    {
+      "key": "china_us",
+      "title": "China − United States",
+      "labels": [
+        [
+          "task_dialogue_act",
+          "answer"
+        ],
+        [
+          "task_dialogue_act",
+          "revise"
+        ],
+        [
+          "operations",
+          "solve"
+        ],
+        [
+          "operations",
+          "translate"
+        ]
+      ]
+    }
+  ]
+}

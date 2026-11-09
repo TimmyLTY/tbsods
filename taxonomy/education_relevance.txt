@@ -1,0 +1,75 @@
+TASK
+Classify the education relevance of each input item using USER-authored messages only. Assign exactly one label to every item.
+
+SCOPE AND INPUT FORMAT
+Inputs have already passed deterministic English-language, redaction, and toxicity filters. Assistant messages and retrieval metadata are not provided.
+
+The input is one JSON object:
+{"items":[{"item_id":"<tracking ID>","user_turns":[{"turn_index":0,"content":"<user text>"}]}]}
+
+Some long conversations may include a "chunk" field and only part of the user text. Classify only the evidence provided. Copy item_id exactly; it is for matching, not classification.
+
+LABEL TAXONOMY
+- core_education: At least one substantive user episode has direct evidence of a formal or clearly task-based educational purpose. This includes tutoring; coursework, homework, or exams; explicitly academic or research writing; school or university administration; admissions; materials or assessment explicitly intended for learners; feedback on explicitly educational work; academic-integrity-risk requests; explicit language-learning exercises; and education-related wellbeing.
+- learning_adjacent: The user explicitly states a goal to learn, understand, practise, or self-study, but provides no course, assignment, exam, teacher/student, academic-work, language exercise, or other formal/task-based education framing.
+- non_education: No substantive educational purpose. This includes generic factual requests; ordinary writing, coding, debugging, documentation, creative, commercial, or professional work; AI prompt generation; workplace training; and cases where education-related words occur only incidentally or inside translation, rewrite, extraction, or other payloads.
+- uncertain: The available user text is too incomplete, contradictory, or unintelligible for a reliable decision. Do not use uncertain merely because the topic is uncommon or the boundary is difficult.
+
+DECISION PROCEDURE
+1. Determine whether the available user text is interpretable; if not, select uncertain.
+2. Identify the user's live purpose. Separate the requested operation from the subject matter of quoted or pasted material.
+3. Select core_education only when a substantive episode contains direct educational-purpose evidence.
+4. Otherwise, select learning_adjacent only when the user explicitly states a learning, understanding, practice, or self-study goal.
+5. Otherwise, select non_education.
+6. For a positive label, cite every original turn_index that directly supports the winning label. Do not cite turns that merely repeat a request or contain only related payload.
+
+EVIDENCE STANDARD AND BOUNDARY RULES
+- One substantive educational episode is sufficient for core_education; it need not be the majority of turns.
+- Do not infer education from the topic, difficulty, technicality, structure, requested detail, step-by-step format, feedback, or use of words such as "explain", "research", "training", or "project" alone.
+- Academic or research writing requires an explicit assignment, course, thesis, dissertation, academic paper/study, school role, or researcher role. General articles, reports, documentation, scripts, and professional writing are non_education.
+- Teaching materials require an explicit learner, class, lesson, curriculum, teaching, or assessment purpose. Structured content or AI prompts are not teaching materials by themselves.
+- Educational feedback requires work explicitly framed as coursework, study, practice, or teaching. General code review, writing feedback, design critique, and script feedback are non_education.
+- Language learning requires an explicit lesson, exercise, study, practice, learner, or teaching purpose. Translation, rewriting, proofreading, grammar correction, or changing direct to indirect speech alone is non_education.
+- A generic factual question or the verb "explain" alone does not establish learning_adjacent.
+- Processing education-themed payload is non_education unless the user's live purpose is educational.
+- Academic-integrity-risk requests remain core_education.
+- Fictional school scenarios and workplace training are non_education unless a genuine educational purpose is explicit.
+
+FEW-SHOT EXAMPLES
+Input item: {"item_id":"ex1","user_turns":[{"turn_index":0,"content":"Help me solve question 3 of my statistics assignment and explain each step."}]}
+Output item: {"item_id":"ex1","education_relevance":"core_education","evidence_user_turn_indices":[0],"rationale":"The user requests guided help with an explicit course assignment."}
+
+Input item: {"item_id":"ex2","user_turns":[{"turn_index":0,"content":"Rewrite this quarterly sales report in a more academic style."}]}
+Output item: {"item_id":"ex2","education_relevance":"non_education","evidence_user_turn_indices":[],"rationale":"This is professional rewriting without academic-work or educational framing."}
+
+Input item: {"item_id":"ex3","user_turns":[{"turn_index":0,"content":"I am practising English reported speech. Convert these five exercise sentences and explain my mistakes."}]}
+Output item: {"item_id":"ex3","education_relevance":"core_education","evidence_user_turn_indices":[0],"rationale":"The user explicitly frames the transformations as a language-learning exercise."}
+
+Input item: {"item_id":"ex4","user_turns":[{"turn_index":0,"content":"Correct the grammar in this product announcement and make it sound natural."}]}
+Output item: {"item_id":"ex4","education_relevance":"non_education","evidence_user_turn_indices":[],"rationale":"Grammar correction is requested without a learning or educational purpose."}
+
+Input item: {"item_id":"ex5","user_turns":[{"turn_index":0,"content":"Create a lesson plan and quiz for my tenth-grade biology class."}]}
+Output item: {"item_id":"ex5","education_relevance":"core_education","evidence_user_turn_indices":[0],"rationale":"The user requests teaching and assessment materials for an explicit class."}
+
+Input item: {"item_id":"ex6","user_turns":[{"turn_index":0,"content":"Write ten detailed prompts that make an AI generate realistic biology diagrams."}]}
+Output item: {"item_id":"ex6","education_relevance":"non_education","evidence_user_turn_indices":[],"rationale":"AI prompt generation has no stated learner, lesson, or educational purpose."}
+
+Input item: {"item_id":"ex7","user_turns":[{"turn_index":0,"content":"Review the Python solution for my CS homework and point out where my algorithm is wrong."}]}
+Output item: {"item_id":"ex7","education_relevance":"core_education","evidence_user_turn_indices":[0],"rationale":"The code review concerns an explicit computer-science homework task."}
+
+Input item: {"item_id":"ex8","user_turns":[{"turn_index":0,"content":"Review this Python service and suggest production performance improvements."}]}
+Output item: {"item_id":"ex8","education_relevance":"non_education","evidence_user_turn_indices":[],"rationale":"This is ordinary professional code review without educational framing."}
+
+Input item: {"item_id":"ex9","user_turns":[{"turn_index":0,"content":"I want to learn how neural networks work from the basics."}]}
+Output item: {"item_id":"ex9","education_relevance":"learning_adjacent","evidence_user_turn_indices":[0],"rationale":"The user states a self-directed learning goal without formal or task-based education context."}
+
+OUTPUT FORMAT
+Return only one valid JSON object in this exact structure:
+{"results":[{"item_id":"<copy input item_id exactly>","education_relevance":"<core_education | learning_adjacent | non_education | uncertain>","evidence_user_turn_indices":[0],"rationale":"<brief evidence-based reason>"}]}
+
+Output requirements:
+- Return exactly one result for every input item; results may appear in any order.
+- For core_education or learning_adjacent, provide all valid, non-duplicated supporting turn indices.
+- For non_education or uncertain, return an empty evidence list.
+- Keep rationale to about 25 English words or fewer.
+- Do not add fields, markdown, commentary, or text outside the JSON object.

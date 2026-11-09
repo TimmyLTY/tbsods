@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "Please cite this resource and the original WildChat paper; see references.bib."
+title: "Characterizing human-LLM delegation: a turn-level annotation framework and resource"
+type: dataset
+authors:
+  - family-names: Liang
+    given-names: Tianyi
+  - family-names: Clavel
+    given-names: Chloé
+  - family-names: Cointet
+    given-names: Jean-Philippe
+  - family-names: Santagiustina
+    given-names: Carlo
+abstract: "Six-dimensional taxonomy and silver-annotated education-related WildChat resource, with analysis and plotting code."
+keywords:
+  - human-LLM interaction
+  - delegation
+  - taxonomy
+  - dialogue annotation
+  - WildChat
+repository-code: "https://github.com/TimmyLTY/tbsods"
+url: "https://github.com/TimmyLTY/tbsods"
+version: "1.0.0"

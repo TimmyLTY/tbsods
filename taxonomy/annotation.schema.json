@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "task_dialogue_act": {
+      "type": "string",
+      "enum": ["answer", "create", "revise", "other", "no_task"]
+    },
+    "boundedness": {
+      "anyOf": [
+        {"type": "string", "enum": ["closed", "guided", "open"]},
+        {"type": "null"}
+      ]
+    },
+    "support": {
+      "type": "array",
+      "items": {"type": "string", "enum": ["user_material", "assistant_material"]}
+    },
+    "operations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "list", "describe", "explain", "solve", "demonstrate", "scaffold",
+          "justify", "compose", "brainstorm", "summarize", "translate",
+          "paraphrase", "simplify", "shorten", "expand", "restructure",
+          "reformat", "extract", "classify", "compare", "evaluate", "diagnose",
+          "correct", "recommend", "predict", "comment", "continue", "recall",
+          "other"
+        ]
+      }
+    },
+    "disclosures": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "identity", "experience", "emotion", "preference", "intended_use",
+          "stake", "benefit", "risk", "other"
+        ]
+      }
+    },
+    "stances": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "acknowledgement", "agreement", "appreciation", "apology",
+          "contestation", "threat", "withdrawal", "opening", "closing",
+          "other_stance"
+        ]
+      }
+    }
+  },
+  "required": [
+    "task_dialogue_act",
+    "boundedness",
+    "support",
+    "operations",
+    "disclosures",
+    "stances"
+  ]
+}
