@@ -1,5 +1,9 @@
 # TBSODS
 
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-blue)](LICENSES/MIT.txt)
+[![Annotations & docs: CC BY 4.0](https://img.shields.io/badge/Annotations%20%26%20docs-CC%20BY%204.0-green)](LICENSES/CC-BY-4.0.txt)
+[![Database: ODC-BY 1.0](https://img.shields.io/badge/Database-ODC--BY%201.0-orange)](LICENSES/ODC-By-1.0.txt)
+
 **Characterizing human-LLM delegation: a turn-level annotation framework and resource**
 
 Resource by **Tianyi Liang, Chloé Clavel, Jean-Philippe Cointet, and Carlo Santagiustina**.
