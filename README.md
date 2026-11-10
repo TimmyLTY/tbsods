@@ -1,8 +1,8 @@
 # TBSODS
 
-[![Code: MIT](https://img.shields.io/badge/Code-MIT-blue)](LICENSES/MIT.txt)
-[![Annotations & docs: CC BY 4.0](https://img.shields.io/badge/Annotations%20%26%20docs-CC%20BY%204.0-green)](LICENSES/CC-BY-4.0.txt)
-[![Database: ODC-BY 1.0](https://img.shields.io/badge/Database-ODC--BY%201.0-orange)](LICENSES/ODC-By-1.0.txt)
+[![Code: MIT](https://img.shields.io/badge/Code-MIT-blue)](LICENSE-MIT)
+[![Annotations & docs: CC BY 4.0](https://img.shields.io/badge/Annotations%20%26%20docs-CC%20BY%204.0-green)](LICENSE-CC-BY-4.0)
+[![Database: ODC-BY 1.0](https://img.shields.io/badge/Database-ODC--BY%201.0-orange)](LICENSE-ODC-By-1.0)
 
 **Characterizing human-LLM delegation: a turn-level annotation framework and resource**
 
@@ -98,4 +98,4 @@ The source is the non-toxic [`allenai/WildChat-1M`](https://huggingface.co/datas
 
 ## License
 
-Code is licensed under MIT; original annotations, documentation, taxonomy and illustrations under CC BY 4.0; and the WildChat-derived database under ODC-BY 1.0. Unicode-derived mapping data retains its existing license. See [LICENSE.md](LICENSE.md) for component scopes and [NOTICE.md](NOTICE.md) for source attribution.
+Code is licensed under MIT; original annotations, documentation, taxonomy and illustrations under CC BY 4.0; and the WildChat-derived database under ODC-BY 1.0. Unicode-derived mapping data retains its existing license. See [LICENSING.md](LICENSING.md) for component scopes and [NOTICE.md](NOTICE.md) for source attribution.

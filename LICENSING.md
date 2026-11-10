@@ -20,7 +20,7 @@ Unicode CLDR 44 data is third-party material with its own copyright and license,
 
 ## License texts
 
-- [MIT](LICENSES/MIT.txt)
-- [CC BY 4.0](LICENSES/CC-BY-4.0.txt)
-- [ODC-BY 1.0](LICENSES/ODC-By-1.0.txt)
+- [MIT](LICENSE-MIT)
+- [CC BY 4.0](LICENSE-CC-BY-4.0)
+- [ODC-BY 1.0](LICENSE-ODC-By-1.0)
 - [Unicode](figures/descriptive/UNICODE-LICENSE.txt)
