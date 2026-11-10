@@ -1,6 +1,6 @@
 # Data dictionary
 
-One row is one annotated user message. The release has **16 fields**; strings and labels are preserved from the frozen resource. Empty arrays mean no label was selected.
+One row is one annotated user message. The release has **16 fields**. Empty arrays mean no label was selected.
 
 | Field | Type | Meaning |
 | --- | --- | --- |
@@ -18,12 +18,12 @@ One row is one annotated user message. The release has **16 fields**; strings an
 | `timestamp` | timestamp[us, UTC] | Original conversation-level last-turn time; not the current user message's sending time |
 | `country` | nullable string | Original conversation-level IP-derived country used in the paper |
 | `state` | nullable string | Original conversation-level IP-derived state/region |
-| `userid` | string | Existing paper-analysis encoding of the modal conversation-level hashed-IP proxy; retained unchanged, formerly called `proxy_id` |
+| `userid` | string | Existing paper-analysis encoding of the modal conversation-level hashed-IP proxy; retained unchanged |
 | `model` | string | Original conversation model version |
 
-`(conversation_id, turn_index)` uniquely identifies a released message. The shard/row locator refers to the `allenai/WildChat-1M` train split at revision `7d6490e462285cf85d91eabea0f9a954fbddcd1f`. It is a positional locator, not WildChat's non-unique content hash. Pin this revision when retrieving the source.
+`(conversation_id, turn_index)` uniquely identifies a released message. The shard/row locator refers to the `allenai/WildChat-1M` train split at revision `7d6490e462285cf85d91eabea0f9a954fbddcd1f`. Pin this revision when retrieving the source.
 
-`userid` preserves the paper's original source grouping and bootstrap order. It is not an account or a verified person. All five metadata fields use one consistent **conversation-level** convention. No new hash is generated. Language fields are omitted because the selected conversations are English.
+`userid` preserves the paper's original source grouping and bootstrap order. It is not an account or a verified person. All five metadata fields use one consistent **conversation-level** convention.
 
 The full 58-label inventory and definitions are in `../taxonomy/taxonomy_definitions.json`. Labels such as `other` must be qualified by axis. The 595 task-present null boundedness labels remain unchanged; detect them with `task_dialogue_act != "no_task"` and `boundedness is null`.
 
@@ -41,7 +41,7 @@ The script retrieves the source row and verifies a released user message against
 
 ## Frozen reconstruction files
 
-`frozen/annotations.parquet` has one row per retained user turn and ten columns: `conversation_id`, `turn_index`, `education_relevance`, the six annotation axes, and `userid`. These values preserve the historical canonical export. It contains no source text or assistant context.
+`frozen/annotations.parquet` has one row per retained user turn and ten columns: `conversation_id`, `turn_index`, `education_relevance`, the six annotation axes, and `userid`. It contains no source text or assistant context.
 
 `frozen/selection.parquet` has one row per clean-English conversation (473,202 rows):
 
